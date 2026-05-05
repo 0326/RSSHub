@@ -7,7 +7,8 @@ compatibility_flags = ["nodejs_compat"]
 assets = { directory = "lib/assets" }
 
 [build]
-command = "pnpm run worker-build"
+# Use --no-frozen-lockfile due to Node version mismatch (CF uses 22.16.0, project requires 22.20.0)
+command = "pnpm install --no-frozen-lockfile && pnpm run worker-build"
 
 # Workers Paid plan is recommended for better performance
 # Free plan has 10ms CPU time limit per request
