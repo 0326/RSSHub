@@ -26,6 +26,59 @@ RSSHub pairs especially well with [Folo](https://folo.is/), an AI RSS reader for
 
 [Documentation](https://docs.rsshub.app) | [Folo](https://folo.is/) | [Telegram Group](https://t.me/rsshub) | [Telegram Channel](https://t.me/awesomeRSSHub) | [X (Twitter)](https://x.com/intent/follow?screen_name=_RSSHub)
 
+## Quick Start
+
+### Local Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Build routes
+pnpm run build:routes
+
+# Start development server (port 1200)
+pnpm dev
+
+# Or start with production cache
+pnpm run dev:cache
+```
+
+### Available Scripts
+
+| Command             | Description              |
+| ------------------- | ------------------------ |
+| `pnpm dev`          | Start development server |
+| `pnpm build:routes` | Build route files        |
+| `pnpm lint`         | Run code linting         |
+| `pnpm format`       | Format code              |
+| `pnpm vitest`       | Run tests                |
+
+### Quick Test
+
+Once the server is running at `http://localhost:1200`, test with:
+
+```bash
+# Test a RSS route
+curl http://localhost:1200/jike/topic/text/553870e8e4b0cafb0a1bef68
+
+# View API documentation
+curl http://localhost:1200/api/reference
+```
+
+### Available Endpoints
+
+| Endpoint             | Description                       |
+| -------------------- | --------------------------------- |
+| `/`                  | RSSHub homepage                   |
+| `/:namespace/:route` | RSS feed routes                   |
+| `/api/reference`     | Interactive API documentation     |
+| `/api/openapi.json`  | OpenAPI specification             |
+| `/api/namespace`     | List all namespaces               |
+| `/api/radar/rules`   | All radar rules                   |
+| `/api/follow/config` | Follow configuration              |
+| `/robots.txt`        | robots.txt (allow all by default) |
+
 ## Related Projects
 
 - [Folo](https://folo.is/) | An AI RSS reader that works especially well with RSSHub. Source code: [GitHub](https://github.com/RSSNext/Folo).

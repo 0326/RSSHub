@@ -21,10 +21,10 @@ overrides:
 
 patchedDependencies:
   '@mswjs/interceptors@0.41.3':
-    hash: 5027fcc424409c41c41147fc6c90b36166061522e0b03e73b45f9a973fcd2a28
+    hash: 4wxdyv5kensmxlvgjtvimlfgfu
     path: patches/@mswjs__interceptors@0.41.3.patch
   rss-parser@3.13.0:
-    hash: afac79a31a3db94c953d49680bc5528468f051957d461e913d2e2dbf5cd22a8d
+    hash: tm4dpdgt7cxbu2hfbvwfiewgmu
     path: patches/rss-parser@3.13.0.patch
 
 importers:
@@ -222,7 +222,7 @@ importers:
         version: 1.5.4
       rss-parser:
         specifier: 3.13.0
-        version: 3.13.0(patch_hash=afac79a31a3db94c953d49680bc5528468f051957d461e913d2e2dbf5cd22a8d)
+        version: 3.13.0(patch_hash=tm4dpdgt7cxbu2hfbvwfiewgmu)
       sanitize-html:
         specifier: 2.17.3
         version: 2.17.3
@@ -7091,7 +7091,7 @@ snapshots:
 
   '@mixmark-io/domino@2.2.0': {}
 
-  '@mswjs/interceptors@0.41.3(patch_hash=5027fcc424409c41c41147fc6c90b36166061522e0b03e73b45f9a973fcd2a28)':
+  '@mswjs/interceptors@0.41.3(patch_hash=4wxdyv5kensmxlvgjtvimlfgfu)':
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/logger': 0.3.0
@@ -10430,7 +10430,7 @@ snapshots:
   msw@2.13.4(@types/node@25.6.0)(typescript@5.9.3):
     dependencies:
       '@inquirer/confirm': 6.0.11(@types/node@25.6.0)
-      '@mswjs/interceptors': 0.41.3(patch_hash=5027fcc424409c41c41147fc6c90b36166061522e0b03e73b45f9a973fcd2a28)
+      '@mswjs/interceptors': 0.41.3(patch_hash=4wxdyv5kensmxlvgjtvimlfgfu)
       '@open-draft/deferred-promise': 3.0.0
       '@types/statuses': 2.0.6
       cookie: 1.1.1
@@ -11122,7 +11122,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.60.3
       fsevents: 2.3.3
 
-  rss-parser@3.13.0(patch_hash=afac79a31a3db94c953d49680bc5528468f051957d461e913d2e2dbf5cd22a8d):
+  rss-parser@3.13.0(patch_hash=tm4dpdgt7cxbu2hfbvwfiewgmu):
     dependencies:
       entities: 7.0.1
       xml2js: 0.6.2
