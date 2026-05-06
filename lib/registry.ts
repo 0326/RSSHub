@@ -263,11 +263,19 @@ if (config.debugInfo !== 'false') {
     app.get('/metrics', metrics);
 }
 if (!config.isPackage && !process.env.VERCEL_ENV && !isWorker) {
+    // Serve built assets from lib/assets (logo.png, favicon.png, build/)
     app.use(
         '/*',
         serveStatic({
             root: path.join(__dirname, 'assets'),
-            rewriteRequestPath: (path) => (path === '/favicon.ico' ? '/favicon.png' : path),
+            rewriteRequestPath: (p) => (p === '/favicon.ico' ? '/favicon.png' : p),
+        })
+    );
+    // Serve public/ directory (routes-index.js)
+    app.use(
+        '/*',
+        serveStatic({
+            root: path.join(__dirname, '../public'),
         })
     );
 }

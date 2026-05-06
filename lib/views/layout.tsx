@@ -1,9 +1,11 @@
 import type { FC } from 'hono/jsx';
 
 export const Layout: FC = (props) => (
-    <html>
+    <html lang="zh">
         <head>
-            <title>Welcome to RSSHub!</title>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>RSSHub - 路由列表</title>
             <script src="https://cdn.tailwindcss.com"></script>
             <style>
                 {`
@@ -41,6 +43,13 @@ export const Layout: FC = (props) => (
                 }
                 body {
                     font-family: SN Pro, sans-serif;
+                }
+                .scrollbar-hide::-webkit-scrollbar {
+                    display: none;
+                }
+                .scrollbar-hide {
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
                 }
                 `}
             </style>
